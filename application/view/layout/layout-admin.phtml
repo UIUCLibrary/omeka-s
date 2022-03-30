@@ -34,22 +34,6 @@ $this->trigger('view.layout');
         <?php echo $this->headLink(); ?>
         <?php echo $this->headStyle(); ?>
         <?php echo $this->headScript(); ?>
-        <script>
-            var _paq = window._paq = window._paq || [];
-            /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
-            /* get user id from last segment of the link to user profile  */
-            let userID = document.querySelector(".user-id:first-of-type a").getAttribute("href").split( '/' ).slice(-1)[0]
-            _paq.push(['setUserId', userID]);
-            _paq.push(['trackPageView']);
-            _paq.push(['enableLinkTracking']);
-            (function() {
-                var u="https://matomo.library.illinois.edu/";
-                _paq.push(['setTrackerUrl', u+'matomo.php']);
-                _paq.push(['setSiteId', '7']);
-                var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
-                g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
-            })();
-        </script>
     </head>
     <?php echo $this->htmlElement('body'); ?>
         <a href="#content" class="skip"><?php echo $translate('Skip to main content'); ?></a>
@@ -133,6 +117,22 @@ $this->trigger('view.layout');
             <a href="<?php echo $this->url('admin/default', ['controller' => 'system-info']); ?>"><?php echo $translate('System information'); ?></a>
             <a href="https://omeka.org/s/docs/user-manual"><?php echo $translate('User manual'); ?></a>
             <a href="https://forum.omeka.org/"><?php echo $translate('Support forums'); ?></a>
+            <script>
+                var _paq = window._paq = window._paq || [];
+                /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+                /* get user id from last segment of the link to user profile  */
+                let userID = document.querySelector(".user-id:first-of-type a").getAttribute("href").split( '/' ).slice(-1)[0]
+                _paq.push(['setUserId', userID]);
+                _paq.push(['trackPageView']);
+                _paq.push(['enableLinkTracking']);
+                (function() {
+                    var u="https://matomo.library.illinois.edu/";
+                    _paq.push(['setTrackerUrl', u+'matomo.php']);
+                    _paq.push(['setSiteId', '7']);
+                    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+                    g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+                })();
+            </script>
         </footer>
     </body>
 </html>
