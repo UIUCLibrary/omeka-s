@@ -15,6 +15,8 @@ $this->headScript()->prependFile($this->assetUrl('js/chosen-options.js', 'Omeka'
 $this->headScript()->prependFile($this->assetUrl('vendor/chosen-js/chosen.jquery.js', 'Omeka'));
 $this->headScript()->prependFile($this->assetUrl('vendor/tablesaw/tablesaw.stackonly.jquery.js', 'Omeka'));
 $this->headScript()->prependFile($this->assetUrl('vendor/jquery/jquery.min.js', 'Omeka'));
+$this->headScript()->prependFile($this->assetUrl('js/matomo.js', 'Omeka'));
+
 $this->jsTranslate();
 
 $escape = $this->plugin('escapeHtml');
