@@ -1,7 +1,8 @@
-user     = ""
-password = ""
-dbname   = ""
-host     = ""
+user = "root"
+password = "root"
+dbname   = "july19"
+host     = "localhost"
+port     = 8889
 ;port     = 
 ;unix_socket = 
 ;log_path = 
