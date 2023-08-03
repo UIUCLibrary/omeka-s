@@ -1,6 +1,5 @@
 user = "root"
 password = "root"
-dbname   = "july19"
 host     = "localhost"
 port     = 8889
 ;port     = 
